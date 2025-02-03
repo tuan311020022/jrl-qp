@@ -4029,12 +4029,8 @@ namespace {
         static bool             isSet;
         static struct sigaction oldSigActions[DOCTEST_COUNTOF(signalDefs)];
         static stack_t          oldSigStack;
-<<<<<<< Updated upstream
-        static char             altStackMem[32768];
-=======
         static size_t           altStackSize;
         static char*            altStackMem;
->>>>>>> Stashed changes
 
         static void handleSignal(int sig) {
             const char* name = "<unknown signal>";
